@@ -132,23 +132,23 @@ h2.title{font-size:clamp(42px,7vw,84px);margin:18px 0 22px}
 .menu-panel .btn{margin-top:20px;border-bottom:2px solid transparent;font-size:15px}
 @media(min-width:960px){.nav{display:flex}.top .btn{display:inline-flex}.menu{display:none}}
 
-/* Hero */
-.hero{padding:clamp(48px,8vw,96px) 0 0;background:
-  repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 1px,transparent 1px 80px),
-  repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 1px,transparent 1px 80px),var(--graphite)}
-.hero h1{font-size:clamp(50px,11vw,150px);margin:22px 0 0}
-.hero h1 .out{display:block;color:transparent;-webkit-text-stroke:1.5px var(--light-2)}
-.hero-row{display:grid;gap:28px;margin-top:36px;padding-bottom:clamp(48px,7vw,80px)}
-.hero-row p{font-size:clamp(19px,2.3vw,23px);max-width:32ch;color:var(--light-2)}
-.hero-row p b{color:var(--light);font-weight:600}
-@media(min-width:960px){.hero-row{grid-template-columns:1fr auto;align-items:end}}
+/* Hero: foto del taller de fondo, leyenda a un tamaño que deja respirar */
+.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--graphite);display:flex;align-items:flex-end;min-height:min(80vh,720px);padding:clamp(56px,8vw,96px) 0 clamp(44px,6vw,72px)}
+.hero-bg{position:absolute;inset:0;margin:0;z-index:-1}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:60% 50%;filter:saturate(.6) contrast(1.05) brightness(.8)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(22,24,26,.96) 0%,rgba(22,24,26,.86) 38%,rgba(22,24,26,.35) 75%,rgba(22,24,26,.2) 100%),
+  linear-gradient(0deg,rgba(22,24,26,.9) 0%,rgba(22,24,26,0) 40%)}
+.hero-in{position:relative}
+.hero h1{font-size:clamp(36px,4.4vw,60px);max-width:16ch;margin:18px 0 20px}
+.hero h1 .out{display:block;color:var(--light-2)}
+.hero-in p{font-size:clamp(18px,1.9vw,21px);line-height:1.55;max-width:38ch;color:var(--light-2);margin-bottom:28px}
+.hero-in p b{color:var(--light);font-weight:600}
+@media(max-width:700px){.hero{min-height:0}.hero-bg::after{background:linear-gradient(0deg,rgba(22,24,26,.97) 0%,rgba(22,24,26,.82) 55%,rgba(22,24,26,.55) 100%)}}
 
 /* Fotos */
 .shot{position:relative;margin:0;overflow:hidden;background:var(--steel);aspect-ratio:4/3}
 .shot img{width:100%;height:100%;object-fit:cover;filter:saturate(.72) contrast(1.05);transition:transform .6s ease}
-.hero-shot{aspect-ratio:16/9}
-.hero-shot img{filter:saturate(.55) contrast(1.08) brightness(.82)}
-@media(min-width:960px){.hero-shot{aspect-ratio:21/8}}
 
 /* Tres divisiones */
 .divs{background:var(--graphite);border-bottom:1px solid var(--line-d)}
@@ -267,19 +267,17 @@ footer{background:var(--ink);color:var(--light-3);padding:32px 0;font:500 12px/1
 
 <main id="contenido">
   <section class="hero" id="inicio">
-    <div class="wrap">
+    <!-- FOTO TEMPORAL (Unsplash, licencia gratuita). Reemplazar por foto propia: foto panorámica del taller, horizontal, mínimo 2400 px -->
+<figure class="hero-bg"><img src="https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&amp;fit=crop&amp;q=80&amp;w=1800" srcset="https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&amp;fit=crop&amp;q=80&amp;w=1000 1000w, https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&amp;fit=crop&amp;q=80&amp;w=1800 1800w, https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&amp;fit=crop&amp;q=80&amp;w=2600 2600w" sizes="100vw" alt="Taller automotriz con autos en elevadores" fetchpriority="high" decoding="async"></figure>
+    <div class="wrap hero-in">
       <span class="eyebrow">Carrocería, pintura y detallado de alta gama</span>
       <h1 class="title">Un choque dura minutos… <span class="out">la mala imagen, hasta que lo reparas.</span></h1>
-      <div class="hero-row">
-        <p>Ven con nosotros y <b>te ayudamos.</b> Pide tu presupuesto estimado por WhatsApp. <span class="pend">[PENDIENTE: confirmar ciudad: Tijuana]</span></p>
-        <div class="btns">
-          <a class="btn btn-y" href="https://wa.me/526641636617?text=Hola%2C%20quiero%20un%20presupuesto%20estimado.">Pedir presupuesto</a>
-          <a class="btn btn-o" href="tel:+526641636617">Llamar 664 163 6617</a>
-        </div>
+      <p>Ven con nosotros y <b>te ayudamos.</b> Pide tu presupuesto estimado por WhatsApp. <span class="pend">[PENDIENTE: confirmar ciudad: Tijuana]</span></p>
+      <div class="btns">
+        <a class="btn btn-y" href="https://wa.me/526641636617?text=Hola%2C%20quiero%20un%20presupuesto%20estimado.">Pedir presupuesto</a>
+        <a class="btn btn-o" href="tel:+526641636617">Llamar 664 163 6617</a>
       </div>
     </div>
-    <!-- FOTO TEMPORAL (Unsplash, licencia gratuita). Reemplazar por foto propia: foto panorámica del taller, horizontal, mínimo 2400 px -->
-<figure class="shot hero-shot"><img src="https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&amp;fit=crop&amp;q=80&amp;w=1800" srcset="https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&amp;fit=crop&amp;q=80&amp;w=1000 1000w, https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&amp;fit=crop&amp;q=80&amp;w=1800 1800w, https://images.unsplash.com/photo-1727893119356-1702fe921cf9?auto=format&amp;fit=crop&amp;q=80&amp;w=2600 2600w" sizes="100vw" alt="Taller automotriz con autos en elevadores" fetchpriority="high" decoding="async"></figure>
   </section>
 
   <nav class="divs" aria-label="Lo que hacemos">
