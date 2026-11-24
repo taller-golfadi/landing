@@ -22,13 +22,13 @@
     ['Presupuesto por WhatsApp', 'Quote on WhatsApp'],
 
     // Hero
-    ['Carrocería, pintura y detallado de alta gama', 'High-end bodywork, paint and detailing'],
+    ['Carrocería, pintura y detallado de alta gama · Tijuana', 'High-end bodywork, paint and detailing · Tijuana'],
     ['Un choque dura minutos… <span class="out">la mala imagen, hasta que lo reparas.</span>',
      'A crash takes minutes… <span class="out">a bad look lasts until you fix it.</span>'],
-    ['Ven con nosotros y <b>te ayudamos.</b> Pide tu presupuesto estimado por WhatsApp. <span class="pend">[PENDIENTE: confirmar ciudad: Tijuana]</span>',
-     'Come to us and <b>we’ll help.</b> Ask for your estimate on WhatsApp. <span class="pend">[PENDING: confirm city: Tijuana]</span>'],
+    ['Ven con nosotros y <b>te ayudamos.</b> Pide tu presupuesto estimado por WhatsApp.',
+     'Come to us and <b>we’ll help.</b> Ask for your estimate on WhatsApp.'],
     ['Pedir presupuesto', 'Get a quote'],
-    ['Llamar 664 163 6617', 'Call 664 163 6617'],
+    ['Llamar 664 175 3452', 'Call 664 175 3452'],
 
     // Divisiones
     ['Autos', 'Cars'],
@@ -103,7 +103,7 @@
     ['Llamar', 'Call'],
     ['Teléfono', 'Phone'],
     ['Dirección', 'Address'],
-    ['[PENDIENTE: dirección]', '[PENDING: address]'],
+    ['Tijuana, B.C. <span class="pend">[PENDIENTE: dirección]</span>', 'Tijuana, B.C. <span class="pend">[PENDING: address]</span>'],
     ['Horario', 'Hours'],
     ['[PENDIENTE: horario]', '[PENDING: hours]'],
     ['¿Qué necesitas? Escríbenos directo:', 'What do you need? Message us directly:'],
@@ -112,7 +112,7 @@
     ['Mi flotilla', 'My fleet'],
     ['Carrito de golf', 'Golf cart'],
     ['Autos · Camiones · Empresas · Carritos de golf', 'Cars · Trucks · Business · Golf carts'],
-    ['[PENDIENTE: ciudad y dirección]', '[PENDING: city and address]']
+    ['[PENDIENTE: dirección]', '[PENDING: address]']
   ];
 
   // Mensajes ya escritos de WhatsApp
@@ -154,11 +154,11 @@
   var META = {
     es: {
       title: 'Taller Golfadi · Carrocería, pintura, detallado y carritos de golf',
-      description: 'Hojalatería, pintura automotriz de alta gama, detallado y mecánica para autos y camiones. Flotillas corporativas, rescate carretero, y venta y reparación de carritos de golf. Presupuesto estimado por WhatsApp al 664 163 6617.'
+      description: 'Hojalatería, pintura automotriz de alta gama, detallado y mecánica para autos y camiones en Tijuana. Flotillas corporativas, rescate carretero, y venta y reparación de carritos de golf. Presupuesto estimado por WhatsApp al 664 163 6617.'
     },
     en: {
       title: 'Golfadi · Bodywork, paint, detailing and golf carts',
-      description: 'Bodywork, high-end automotive paint, detailing and mechanics for cars and trucks. Corporate fleets, roadside rescue, and golf cart sales and repair. Get an estimate on WhatsApp at +52 664 163 6617.'
+      description: 'Bodywork, high-end automotive paint, detailing and mechanics for cars and trucks in Tijuana. Corporate fleets, roadside rescue, and golf cart sales and repair. Get an estimate on WhatsApp at +52 664 163 6617.'
     }
   };
 
