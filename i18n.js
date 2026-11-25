@@ -112,7 +112,27 @@
     ['Mi flotilla', 'My fleet'],
     ['Carrito de golf', 'Golf cart'],
     ['Autos · Camiones · Empresas · Carritos de golf', 'Cars · Trucks · Business · Golf carts'],
-    ['[PENDIENTE: dirección]', '[PENDING: address]']
+    ['[PENDIENTE: dirección]', '[PENDING: address]'],
+
+    // Solo en rojo.html (feedback del cliente): flotillas con camiones, y eléctricos, híbridos y golf
+    ['Flotillas y camiones', 'Fleets and trucks'],
+    ['Flotillas, camiones y rescate', 'Fleets, trucks and rescue'],
+    ['Eléctricos, híbridos y golf', 'Electric, hybrid and golf'],
+    ['Autos eléctricos, híbridos y carritos de golf', 'Electric and hybrid cars, and golf carts'],
+    ['Eléctricos y golf', 'Electric & golf'],
+    ['02 · Flotillas y camiones', '02 · Fleets and trucks'],
+    ['Flotillas, camiones y rescate.', 'Fleets, trucks and rescue.'],
+    ['03 · Eléctricos, híbridos y golf', '03 · Electric, hybrid and golf'],
+    ['Eléctricos, híbridos y de golf.', 'Electric, hybrid and golf.'],
+    ['Atención a carros eléctricos, híbridos y de golf.', 'Service for electric, hybrid and golf vehicles.'],
+    ['Eléctricos', 'Electric'],
+    ['Golf', 'Golf'],
+    ['Autos eléctricos e híbridos <em><span class="pend">[PENDIENTE: confirmar qué servicios ya se ofrecen]</span></em>',
+     'Electric and hybrid cars <em><span class="pend">[PENDING: confirm which services are already offered]</span></em>'],
+    ['Carritos de golf, también eléctricos', 'Golf carts, including electric ones'],
+    ['Mi auto eléctrico o híbrido', 'My electric or hybrid car'],
+    ['Eléctrico o híbrido', 'Electric or hybrid'],
+    ['Autos · Flotillas y camiones · Eléctricos, híbridos y golf', 'Cars · Fleets and trucks · Electric, hybrid and golf']
   ];
 
   // Mensajes ya escritos de WhatsApp
@@ -129,7 +149,8 @@
     ['Hola, necesito reparar un carrito de golf.', 'Hi, I need to repair a golf cart.'],
     ['Hola, quiero un presupuesto para mi auto.', 'Hi, I’d like a quote for my car.'],
     ['Hola, necesito rescate.', 'Hi, I need a rescue.'],
-    ['Hola, quiero información de carritos de golf.', 'Hi, I’d like information about golf carts.']
+    ['Hola, quiero información de carritos de golf.', 'Hi, I’d like information about golf carts.'],
+    ['Hola, quiero información para mi auto eléctrico o híbrido.', 'Hi, I’d like information for my electric or hybrid car.']
   ];
 
   // Textos alternativos de fotos y etiquetas para lectores de pantalla
@@ -161,6 +182,11 @@
       description: 'Bodywork, high-end automotive paint, detailing and mechanics for cars and trucks in Tijuana. Corporate fleets, roadside rescue, and golf cart sales and repair. Get an estimate on WhatsApp at +52 664 163 6617.'
     }
   };
+  // rojo.html lleva su propia descripción (camiones dentro de flotillas; eléctricos, híbridos y golf)
+  if (document.documentElement.getAttribute('data-variant') === 'rojo') {
+    META.es.description = 'Hojalatería, pintura automotriz de alta gama, detallado y mecánica para autos y camiones en Tijuana. Flotillas, camiones y rescate carretero. Atención a carros eléctricos, híbridos y de golf. Presupuesto estimado por WhatsApp al 664 163 6617.';
+    META.en.description = 'Bodywork, high-end automotive paint, detailing and mechanics for cars and trucks in Tijuana. Fleets, trucks and roadside rescue. Service for electric, hybrid and golf vehicles. Get an estimate on WhatsApp at +52 664 163 6617.';
+  }
 
   var norm = function (s) { return s.replace(/\s+/g, ' ').trim(); };
   var pairs = {}, waPairs = {}, attrPairs = {};
