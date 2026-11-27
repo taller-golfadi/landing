@@ -84,6 +84,8 @@
     ['Venta', 'Sales'],
     ['Carritos de golf <em><span class="pend">[PENDIENTE: nuevos, seminuevos o ambos]</span></em>',
      'Golf carts <em><span class="pend">[PENDING: new, used, or both]</span></em>'],
+    ['Carros de golf <em><span class="pend">[PENDIENTE: nuevos, seminuevos o ambos]</span></em>',
+     'Golf carts <em><span class="pend">[PENDING: new, used, or both]</span></em>'],
     ['Reparación', 'Repair'],
     ['Comprar un carrito', 'Buy a cart'],
     ['Reparar mi carrito', 'Repair my cart'],
@@ -250,8 +252,8 @@
 
   var META = {
     es: {
-      title: 'Taller Golfadi · Carrocería, pintura, detallado y carritos de golf',
-      description: 'Hojalatería, pintura automotriz de alta gama, detallado y mecánica para autos y camiones en Tijuana. Flotillas corporativas, rescate carretero, y venta y reparación de carritos de golf. Presupuesto estimado por WhatsApp al 664 163 6617.'
+      title: 'Taller Golfadi · Carrocería, pintura, detallado y carros de golf',
+      description: 'Hojalatería, pintura automotriz de alta gama, detallado y mecánica para autos y camiones en Tijuana. Flotillas corporativas, rescate carretero, y venta y reparación de carros de golf. Presupuesto estimado por WhatsApp al 664 163 6617.'
     },
     en: {
       title: 'Golfadi · Bodywork, paint, detailing and golf carts',
